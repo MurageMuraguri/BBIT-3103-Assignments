@@ -18,7 +18,7 @@
     <!-- External
     Adding JS using an external script sheet through the script tag
     using the src attribute
-    -->
+  -->
     <!-- You can either add JS on the head section or before the close of the body depending on
     your specification
   -->
@@ -61,6 +61,7 @@
 
             <!-- except e :) because you can exponents in numbers 2e12 -->
             <input type="number" name="num1" id="num1" value="" class="form-control">
+           
             <span style='display:none;' id="num1Error" class="text-danger"> <i class="fas fa-bomb"></i> </span>
           </div>
 
@@ -68,6 +69,13 @@
             <label for="num2">Second Number</label>
             <input type="number" name="num2" id="num2" value="" class="form-control">
             <span style='display:none;' id="num2Error" class="text-danger"> <i class="fas fa-bomb"></i> </span>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="round"name="round">
+            <label class="form-check-label" for="defaultCheck1">
+              Round Off?
+            </label>
           </div>
 
           <button id="divide-them" class="btn btn-primary" name="divide-them" type="button" name="button" onclick="divideThem()">
