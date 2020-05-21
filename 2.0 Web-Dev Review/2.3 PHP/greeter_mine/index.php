@@ -8,11 +8,20 @@
 
   <body>
 
-    <?php if( $_GET['greet'] == "yes"): ?>
-
+    <?php if( $_GET['greet'] == "yes"){ ?>
+        
       <div class="flex mx-auto justify-center">
-        <img class="w-1/4" src="greeter.gif" alt="">
-      </div>
+        
+        <?php if($_GET['gender']=="f"){ ?>
+         
+          <iframe src="https://giphy.com/embed/3otPoLlNbGZIabBYSQ" width="280" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/themenzingers-3otPoLlNbGZIabBYSQ"></a></p>
+        <?php }else if($_GET['gender']=="m"){?>
+          <iframe src="https://giphy.com/embed/13oH6nnW52LUFG" width="280" height="130" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/friendship-handshake-funny-13oH6nnW52LUFG"></a></p> 
+     
+        <?php }else{ ?>
+           <iframe src="https://giphy.com/embed/urvsFBDfR6N32" width="218" height="280" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/robot-cartoon-futurama-urvsFBDfR6N32"></a></p> 
+      <?php } ?>
+    </div>
 
       <div class="flex mx-auto rounded w-1/4 items-center justify-center bg-blue-500 text-white text-lg text-center font-bold px-4 py-3 top-3" role="alert">
 
@@ -25,7 +34,7 @@
 
       </div>
 
-    <?php endif; ?>
+     <?php } ?>
 
     <div class="flex">
 
@@ -53,6 +62,7 @@
                 <option value="">Please select</option>
                 <option value="f">Female</option>
                 <option value="m">Male</option>
+                <option value="r">Robot</option>
             </select>
           </div>
 

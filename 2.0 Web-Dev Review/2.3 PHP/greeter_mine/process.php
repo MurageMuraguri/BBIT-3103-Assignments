@@ -20,20 +20,28 @@ if($space_position == false){
 $greeting = $first_name;
  
 if($gender == "f"){
-
-
+  if($age <= 12){
+    //redirecting you to another page in PHP
+    header("Location:index.php?msg= Hey toto princess, ${greeting}&greet=yes&gender=$gender");
+  }else if($age >= 13 and $age <= 19){
+    header("Location:index.php?msg= Hello Princess, ${greeting}&greet=yes&gender=$gender");
+  }else if($age >= 20 and $age <= 30){
+    header("Location:index.php?msg= Wagwan BabyBoo, ${greeting}&greet=yes&gender=$gender");
+  }else{
+    header("Location:index.php?msg=Yes Mathe, ${greeting}&greet=yes&gender=$gender");
+  }
 }else if($gender == "m"){
   if($age <= 12){
     //redirecting you to another page in PHP
-    header("Location:index.php?msg= Sasa boi, ${greeting}&greet=yes");
+    header("Location:index.php?msg= Sasa boi, ${greeting}&greet=yes&gender=$gender");
   }else if($age >= 13 and $age <= 19){
-    header("Location:index.php?msg=Wolan TeenieMan, ${greeting}&greet=yes");
+    header("Location:index.php?msg=Wolan TeenieMan, ${greeting}&greet=yes&gender=$gender");
   }else if($age >= 20 and $age <= 30){
-    header("Location:index.php?msg=Wagwan Yout, ${greeting}&greet=yes");
+    header("Location:index.php?msg=Wagwan Yout, ${greeting}&greet=yes&gender=$gender");
   }else{
-    header("Location:index.php?msg=Itakuwaje Bazzu, ${greeting}&greet=yes");
+    header("Location:index.php?msg=Itakuwaje Bazzu, ${greeting}&greet=yes&gender=$gender");
   }
 }else{
+  header("Location:index.php?msg=Beep! Boop! How's Skynet!, ${greeting}&greet=yes&gender=$gender");
 
 }
-
